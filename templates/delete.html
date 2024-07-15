@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+    body{
+		background-color: #638CB8;
+        margin-top: 20px;
+	}
+
+	input{
+		width: 100px;
+		padding: 2px 2px;
+		margin: 8px 0;
+		box-sizing: border-box;
+	}
+
+	input::placeholder {
+	  color: #d3d3d3;
+	}
+</style>
+
+<p>Are you sure you want to delete "{{item}}"?</p>
+
+<a class="btn btn-sm btn-danger" href="{% url 'list' %}">Cancel</a>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" name="Confirm">
+</form>
