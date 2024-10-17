@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "Django-To-do-List/wsgi.py",
+        "src": "Todo_List/wsgi.py",
         "use": "@vercel/python"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "Django-To-do-List/wsgi.py"
+        "dest": "Todo_List/wsgi.py"
       }
     ]
   }
